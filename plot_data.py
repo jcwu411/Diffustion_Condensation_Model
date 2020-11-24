@@ -9,13 +9,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_2d(n, x, y, color, lw, lb,
+def plot_2d(x, y, color, lw, lb,
             ti="Plot", xl="X", yl="Y", legendloc=4,
             xlim=(0, 1), ylim=(0, 1), ylog=False,
             fn="plot2d.pdf", sa=False):
     """
-    Plot n lines on x-y coordinate system
-    :param n: The number of the plot line
+    Plot a line on x-y coordinate system
     :param x:
     :param y:
     :param color: The color of each line
@@ -34,8 +33,7 @@ def plot_2d(n, x, y, color, lw, lb,
     """
 
     plt.figure()
-    for i in range(n):
-        plt.plot(x, y[i], color=color[i], linewidth=lw[i], label=lb[i])
+    plt.plot(x, y, color=color, linewidth=lw, label=lb)
 
     plt.title(ti)
 
